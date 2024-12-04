@@ -1,0 +1,28 @@
+\chapter{Introduction}
+
+    A transformation is a mathematical operation, which transforms mathematical expressions into another equivalent simple form. The Laplace transform enables us to solve differential equations using algebraic methods. Laplace transform is a mathematical tool that can be used to solve many problems in Science and engineering. This transform was first introduced by Laplace, a French mathematician, in the year 1790, in his work on probability theory This technique became very popular when the Heaveside function was applied to the solution of ordinary differential equations in electrical Engineering problems.
+
+    Many kinds of transformation exist, but Laplace transform and fourier transform are the most well known. The Laplace transform is related to fourier transform, but whereas the fourier transform expresses a function or signal as a series of mode of vibrations, the Laplace transform resolves a function into its moments.
+
+    Like the Fourier transform, the Laplace transform is used for solving differential and integral equations. In Physics and Engineering, it is used for the analysis of linear time-invariant systems such as electrical circuits, harmonic oscillators, optical devices, and mechanical systems. In such analysis, the Laplace transform is often interpreted as a transformation from the time domain in which inputs and outputs are functions of time, to the frequency domain, where the same inputs and outputs are functions of complex angular frequency in radius per unit time. Given a simple mathematical or functional description of an input or output to a system, the Laplace transform provides an alternative functional description that often simplifies the process of analyzing the behavior of the system or synthesizing a new system based on a set of specifications. The Laplace transform belongs to the family of integral transforms. The solutions to mechanical or electrical problems involving discontinuous force function are obtained easily by Laplace transforms.
+
+    \footnote{This Chapter is borrowed from \href{http://www.sist.sathyabama.ac.in/sist_coursematerial/uploads/SMT1401.pdf}{Here}}
+
+    \section{Definition}
+
+        Let $f(t)$ be a functions of the variable $\mathrm{t}$ which is defined for all positive values of $\mathrm{t}$.         
+        Let $\mathrm{s}$ be the real constant.        
+        
+        If the integral $\displaystyle \int_{0}^{\infty}e^{-st}f(t)dt$ exist and is equal to $\mathrm{F}(\mathrm{s})$ , then $\mathrm{F}(\mathrm{s})$ is called the Laplace transform of $f(t)$ and is denoted by the symbol $\mathcal{L}\{f(t)\}$.
+
+        \begin{center}
+        i.e $\mathcal{L}\{f(t)\}=\displaystyle \int_{0}^{\infty}e^{-st}f(t)dt=F(s)$
+        \end{center}
+
+        The Laplace Transform of $f(t)$ is said to exist if the integral converges for some values of $\mathrm{s}$, otherwise it does not exist.
+        Here the operator $\mathrm{L}$ is called the Laplace transform operator which transforms the functions $f(t)$ into $\mathrm{F}(\mathrm{s})$ .
+
+        \begin{center}
+            Remark: $\displaystyle \lim_{s \to \infty} F(s)=0$
+        \end{center}
+        

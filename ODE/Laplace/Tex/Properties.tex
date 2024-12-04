@@ -1,0 +1,80 @@
+\chapter{Properties}
+    In my experience, I am unable to recall numerous operator properties just by looking at them. This also applied to derivatives, limits, and integrals, which is how I ended up not pursuing mathematics for a few years. The solution i found about this matter was to engage my self with the process of proofing the idea. This very helpful because I learned how I can effectively apply these mathematics tool to achieve the desired result.
+
+    I have found that simply looking at many operator attributes does not help me remember them. This also held true for integrals, derivatives, and limits, which is how I decided to put mathematics on hold for a few years. My answer to this challenge was to put myself through the idea proofing. This was really beneficial since I discovered how to use these mathematical tools efficiently to get the intended outcome.
+
+    This is significant in this case as well because a lot of problems demand  creative problem-solving, and partly remembering the proof helps one recall the concept.
+
+    \section{Linear Properties}
+        Linear property of Laplace Transform.
+        \begin{enumerate}
+            \item $\mathcal{L}\left\{f(t)\pm g(t)\right\}=\mathcal{L}\left\{f(t)\right\}\pm \mathcal{L}\left\{g(t)\right\}$
+            \item $\mathcal{L}\left\{Kf(t)\right\}=K\mathcal{L}\left\{f(t)\right\}$
+        \end{enumerate}
+
+
+        proof: By the definition of $\mathcal{L}\left\{f(t)\right\}=\int_{0}^{\infty}e^{-st}f(t)dt$
+
+        \begin{align*}
+            \displaystyle
+            \mathcal{L}\left\{f(t)\pm g(t)\right\}&=\int_{0}^{\infty}e^{-st}[f(t)\pm g(t)]dt\\
+            &=\int_{0}^{\infty}e^{-st}f(t)dt\pm\int_{0}^{\infty}e^{-st}g(t)dt\\
+            &=\mathcal{L}\left\{f(t)\right\}\pm \mathcal{L}\left\{g(t)\right\}
+        \end{align*}
+
+        
+        \begin{align*}
+            \displaystyle
+            \mathcal{L}\left\{Kf(t)\right\}&=\int_{0}^{\infty}e^{-st}Kf(t)dt\\
+            &=K\int_{0}^{\infty}e^{-st}f(t)dt\\
+            &=K\mathcal{L}\left\{f(t)\right\}
+        \end{align*}
+
+
+    \section{Famous Laplaces}
+
+        \subsection{\texorpdfstring{$\displaystyle \mathcal{L}\{e^{-at}\}=\frac{1}{s+a}$}{Lg}}
+        Prove that $\mathcal{L}\{e^{-at}\}=\displaystyle \frac{1}{s+a}$
+        where $s+a>0$ or $s>-a$
+        Proof:
+        By definition $\mathcal{L}\{f(t)\}=\displaystyle \int_{0}^{\infty}e^{-st}f(t)dt$
+        \begin{align*}
+            \mathcal{L}\{e^{-at}\} &= \int_{0}^{\infty}e^{-st}\cdot e^{-at}dt\\
+            &=\int_{0}^{\infty}e^{-t(s+a)}dt\\
+            &=\left[\frac{-e^{-t(s+a)}}{s+a} \right]_{0}^{\infty}\\
+            &=\frac{-1}{s+a}\left[e^{-\infty}-e^{0}\right]
+        \end{align*}
+        Hence 
+        \begin{equation}
+            \mathcal{L}[e^{-at}]=\displaystyle \frac{1}{s+a}
+        \end{equation}
+
+
+        \subsection{\texorpdfstring{$\displaystyle \mathcal{L}\{\cos\left(at\right) \}=\frac{s}{s^2+a^2}$}{Lg}}
+        Prove that $\displaystyle \mathcal{L}\{\cos\left(at\right)\}=\frac{s}{s^2+a^2}$
+        By definition $\mathcal{L}\{f(t)\}=\displaystyle \int_{0}^{\infty}e^{-st}f(t)dt$
+        \begin{align*}
+            \mathcal{L}\{\cos\left(at\right) \} &= \displaystyle \int_{0}^{\infty}e^{-st}f(t)dt\\
+            &=\int_{0}^{\infty}e^{-st}\cos\left(at\right) dt\\
+            &=\left[\frac{e^{-st}}{s^{2}+a^{2}}(-s\cos at+a\sin at) \right]_{0}^{\infty}\\
+            &=0-\frac{1}{s^{2}+a^{2}}(-s)\\
+            &=\frac{s}{s^{2}+a^{2}}
+        \end{align*}
+        Hence 
+        \begin{equation}
+            \mathcal{L}\{\cos\left(at\right) \}=\frac{s}{s^{2}+a^{2}}
+        \end{equation}
+        
+
+        \subsection{\texorpdfstring{$\displaystyle \mathcal{L}\{t^{n}\}=\frac{n!}{s^{n}}\cdot\frac{1}{s}$}{Lg}}
+        \begin{align*}
+            \mathcal{L}(t^{n}) &= \displaystyle \int_{0}^{\infty}e^{-st}t^{n}dt\\
+            &= \left[(t^{n})\frac{e^{-st}}{-s}\right]_{0}^{\infty}-\int_{0}^{\infty}nt^{n-1}(\frac{e^{-st}}{-s})dt\\
+            &= (0-0)+\frac{n}{s}\int_{0}^{\infty}e^{-st}t^{n-1}dt\\
+            &= \frac{n}{s}\mathcal{L}(t^{n-1})\\
+            &= \frac{n}{s} \cdot \frac{n-1}{s} \mathcal{L}(t^{n-2})\\
+            &= \frac{n}{s}\cdot\frac{n-1}{s}\cdot\frac{n-2}{s} \cdots \frac{3}{s}\cdot\frac{2}{s}\cdot\frac{1}{s}\cdot L(1)\\
+            &= \frac{n!}{s^{n}}L[1]=\frac{n!}{s^{n}}\cdot\frac{1}{s}
+        \end{align*}
+
+
